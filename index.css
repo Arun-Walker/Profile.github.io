@@ -116,7 +116,7 @@ body::-webkit-scrollbar{
     width: 700px;
     height: 900px; 
     border: none; 
-    margin: -36% 0% 0% 60%;     
+    margin: -33% 0% 0% 60%;     
     border-radius: 30px;
     background-image: url('DSC02.jpg');
     background-size: cover;  
@@ -229,144 +229,13 @@ body::-webkit-scrollbar{
     transition: transform 0.3s ease;
   }
   #spring{
-    margin-right: -50px;
+    margin-right: 0px;
     width: 150px;
   }
   #hib{
     margin-right: -50px;
     width: 170px;
   }
-#experiencePage{
-    height: 3px;  
-    border-radius: 10px; 
-    border: none;
-    background-image: linear-gradient(to right, #8A2BE2, #FF1493, #00BFFF); 
-    box-shadow: 
-    0px 0px 10px #8A2BE2,  
-    0px 0px 100px #FF1493, 
-    0px 0px 360px #00BFFF; 
-}
-#experienceDiv {
-    height: 950px;
-}
-#experienceContent > h1{
-    text-align: center;
-    font-size: 70px ; 
-    margin: 2% 0% 0% 0%;  
-    font-weight: lighter;
-    letter-spacing: 8px;
-}
-#experienceContent{
-  opacity: 0;
-   transform: translateY(50px);
-   animation: slideIn 1s 1.8s forwards;
-   animation-timeline: view();
-   animation-range: entry 0% cover 40%;
-}
-/*Added*/
-.timeline {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    padding: 20px 0;
-    margin: 5% 0% 0% 0%;
-  }
-
-  .timeline::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    height: 380px;
-    background: #ffffff;
-    left: 50%;
-    transform: translateX(-50%); 
-  }
- 
-  .timeline-item {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    text-align: center;
-    margin: 20px 0px;
-    position: relative;
-    width: 80%;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-
-  .timeline-item:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 8px 16px rgba(255, 253, 253, 0.219);
-  }
-
-  .circle {
-    width: 20px;
-    height: 20px;
-    background: #0078d7;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    border: 4px solid #f4f4f9;
-  }
-
-  .content {
-    background: #121212;
-    
-    border-radius: 8px;
-    padding: 20px;
-    width: 100%; 
-    z-index: 0;
-    position: relative;
-    overflow: hidden; 
-  }
-
-  .logo1 {
-    width: 90px;
-    height: 80px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .content:hover .logo1 {
-    box-shadow: 
-    0px 0px 10px #8A2BE2,  
-    0px 0px 100px #FF1493, 
-    0px 0px 360px #00BFFF; 
-  }  
-  .content:hover {
-    box-shadow: 
-    0px 0px 10px #8A2BE2,  
-    0px 0px 25px #FF1493, 
-    0px 0px 50px #00BFFF;
-  }
-  .content h3 {
-    margin: 0 0 10px;
-    font-size: 1.25rem;
-    color: #0078d7;
-    transition: color 0.3s ease-in-out;
-  }
-
-  .content:hover h3 {
-    color: #ffffff;
-  }
-
-  .content p {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.5;
-    opacity: 0.8;
-    transition: opacity 0.3s ease-in-out;
-  }
-
-  .content:hover p {
-    opacity: 1;
-  } 
 #projectPage{
     height: 3px;  
     border-radius: 10px; 
@@ -520,7 +389,57 @@ a:hover {
   font-size: 20px;
 }
 
+.to-top {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  bottom: 15px;
+  left: 15px;
+  position: fixed;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  opacity: 0;
+  color: #FF1493;
+  transition: all .3s;
+  pointer-events: none;  
+  animation-name: topBtn;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.to-top:hover{
+  color: black;
+  box-shadow: 
+  0px 0px 10px #8A2BE2,  
+  0px 0px 25px #FF1493, 
+  0px 0px 50px #00BFFF;
+}
+
 /* Animations */
+@keyframes topBtn {
+  0% {
+    transform: translateY(0px);
+    transition: all ease .3s;
+  }
+  50% {
+    transform: translateY(-30px);
+    transition: all ease .3s;
+  }
+  100%{
+    transform: translateY(0px);
+    transition: all ease .3s;
+  }
+}
+
 @keyframes slideIn {
   0% {
       opacity: 0;
@@ -636,7 +555,7 @@ a:hover {
   margin: -60% 0% 0% 46%;     
   }
   #profileDiv{
-    height: 750px;  
+    height: 800px;  
 }
 #profileContent > h1{
      text-align: center;
@@ -682,11 +601,12 @@ a:hover {
     height: 50px;
   }
   #spring{
-    display: none;
+    margin-right: -20px;
+    width: 120px;
   }
   #hib{
     margin-right: -20px;
-    width: 140px;
+    width: 120px;
   }
 
   .logo:hover {
@@ -694,18 +614,8 @@ a:hover {
     transform: scale(1.2) rotate(0deg); /* Slight rotation effect on hover */
     transition: transform 0.3s ease;    
   }
-#experienceDiv {
-    height: 950px;
-}
-#experienceContent > h1{
-    text-align: center;
-    font-size: 37px ; 
-    margin: 2% 0% 0% 0%;  
-    font-weight: lighter;
-    letter-spacing: 8px;
-}
 .projectDiv{
-  height: 1500px;
+  height: 1200px;
 }
 #projectContent > h1{
   font-size: 30px ; 
@@ -713,7 +623,7 @@ a:hover {
 }
 #certTables > table{
   border: 1px solid white;
-  font-size: 14px;
+  font-size: 12px;
   margin: 2% 0% 0% 1%;
   border-radius: 15px;
 }
@@ -722,7 +632,7 @@ a:hover {
   text-align: center;
 }
 #t2{
-  font-size: 17px;
+  font-size: 12px;
 }
 .bioDataDiv{
   height: 1500px;
@@ -795,7 +705,7 @@ a:hover {
   .dp{
     width: 210px;
     height: 340px;  
-    margin: -50% 0% 0% 46%;     
+    margin: -50% 0% 0% 44%;     
     }
     #Qt::after{
       margin-left: 350px;
@@ -805,13 +715,13 @@ a:hover {
     }
 
     #t2{
-      font-size: 18px;
+      font-size: 14px;
     }
     .nav a{ 
       font-size: 13px; 
     }
     .projectDiv{
-      height: 1400px;
+      height: 1600px;
     }
 
 }
@@ -907,7 +817,8 @@ a:hover {
     height: 50px;
   }
   #spring{
-    display: none;
+    margin-right: -20px;
+    width: 140px;
   }
   #hib{
     margin-right: -20px;
@@ -918,18 +829,8 @@ a:hover {
     cursor: pointer;
     transform: scale(1.2) rotate(0deg); /* Slight rotation effect on hover */
   }
-  #experienceDiv {
-    height: 950px;
-}
-#experienceContent > h1{
-    text-align: center;
-    font-size: 43px ; 
-    margin: 2% 0% 0% 0%;  
-    font-weight: lighter;
-    letter-spacing: 8px;
-}
 .projectDiv{
-  height: 1000px;
+  height: 1500px;
 }
 #projectContent > h1{
   font-size: 30px ; 
@@ -1098,7 +999,8 @@ a:hover {
     height: 50px;
   }
   #spring{
-    display: none;
+    margin-right: -20px;
+    width: 140px;
   }
   #hib{
     margin-right: -20px;
@@ -1109,19 +1011,9 @@ a:hover {
     cursor: pointer;
     transform: scale(1.2) rotate(0deg); /* Slight rotation effect on hover */
   }
-  #experienceDiv {
-    height: 850px;
-}
-#experienceContent > h1{
-    text-align: center;
-    font-size: 47px ; 
-    margin: 2% 0% 0% 0%;  
-    font-weight: lighter;
-    letter-spacing: 8px;
-}
 
 .projectDiv{
-  height: 950px;
+  height: 1500px;
 }
 #projectContent > h1{
   font-size: 35px ; 
@@ -1289,7 +1181,8 @@ a:hover {
     height: 50px;
   }
   #spring{
-    display: none;
+    margin-right: -20px;
+    width: 140px;
   }
   #hib{
     margin-right: -20px;
@@ -1301,7 +1194,7 @@ a:hover {
     transform: scale(1.2) rotate(0deg); /* Slight rotation effect on hover */
   }
   .projectDiv{
-    height: 950px;
+    height: 1300px;
   }
   #projectContent > h1{
     font-size: 35px ; 
@@ -1469,7 +1362,8 @@ a:hover {
     height: 50px;
   }
   #spring{
-    display: none;
+    margin-right: -20px;
+    width: 140px;
   }
   #hib{
     margin-right: -20px;
@@ -1480,18 +1374,9 @@ a:hover {
     cursor: pointer;
     transform: scale(1.2) rotate(0deg); /* Slight rotation effect on hover */
   }
-  #experienceDiv {
-    height: 850px;
-}
-#experienceContent > h1{
-    text-align: center;
-    font-size: 52px ; 
-    margin: 2% 0% 0% 0%;  
-    font-weight: lighter;
-    letter-spacing: 8px;
-}
+
 .projectDiv{
-  height: 900px;
+  height: 1200px;
 }
 #projectContent > h1{
   font-size: 35px ; 
@@ -1615,7 +1500,7 @@ a:hover {
   .dp{
   width: 270px;
   height: 360px;  
-  margin: -40% 0% 0% 55%;     
+  margin: -40% 0% 0% 53%;     
   }
   #profileDiv{
     height: 700px;  
@@ -1659,7 +1544,8 @@ a:hover {
     height: 50px;
   }
   #spring{
-    display: none;
+    margin-right: -20px;
+    width: 140px;
   }
   #hib{
     margin-right: -20px;
@@ -1670,18 +1556,9 @@ a:hover {
     cursor: pointer;
     transform: scale(1.2) rotate(0deg); /* Slight rotation effect on hover */
   }
-  #experienceDiv {
-    height: 850px;
-}
-#experienceContent > h1{
-    text-align: center;
-    font-size: 53px ; 
-    margin: 2% 0% 0% 0%;  
-    font-weight: lighter;
-    letter-spacing: 8px;
-}
+
 .projectDiv{
-  height: 800px;
+  height: 1100px;
 }
 #projectContent > h1{
   font-size: 35px ; 
@@ -1820,7 +1697,7 @@ a:hover {
   .dp{
   width: 290px;
   height: 380px;  
-  margin: -35% 0% 0% 60%;     
+  margin: -35% 0% 0% 57%;     
   }
   #profileDiv{
     height: 700px;  
@@ -1864,7 +1741,8 @@ a:hover {
     height: 60px;
   }
   #spring{
-    display: none;
+    margin-right: -20px;
+    width: 140px;
   }
   #hib{
     margin-right: -20px;
@@ -1875,18 +1753,9 @@ a:hover {
     cursor: pointer;
     transform: scale(1.2) rotate(0deg); /* Slight rotation effect on hover */
   }
-  #experienceDiv {
-    height: 850px;
-}
-#experienceContent > h1{
-    text-align: center;
-    font-size: 56px; 
-    margin: 2% 0% 0% 0%;  
-    font-weight: lighter;
-    letter-spacing: 10px;
-}
+
 .projectDiv{
-  height: 850px;
+  height: 1000px;
 }
 #projectContent > h1{
   font-size: 37px ; 
@@ -2026,8 +1895,8 @@ a:hover {
   }
   .dp{
   width: 350px;
-  height: 420px;  
-  margin: -25% 0% 0% 60%;     
+  height: 520px;  
+  margin: -25% 0% 0% 55%;     
   }
   #profileDiv{
     height: 700px;  
@@ -2071,7 +1940,8 @@ a:hover {
     height: 60px;
   }
   #spring{
-    display: none;
+    margin-right: -20px;
+    width: 140px;
   }
   #hib{
     margin-right: -20px;
@@ -2082,18 +1952,9 @@ a:hover {
     cursor: pointer;
     transform: scale(1.2) rotate(0deg); /* Slight rotation effect on hover */
   }
-  #experienceDiv {
-    height: 850px;
-}
-#experienceContent > h1{
-    text-align: center;
-    font-size: 56px ; 
-    margin: 2% 0% 0% 0%;  
-    font-weight: lighter;
-    letter-spacing: 10px;
-}
+
 .projectDiv{
-  height: 850px;
+  height: 1000px;
 }
 #projectContent > h1{
   font-size: 40px ; 
@@ -2234,7 +2095,7 @@ a:hover {
   .dp{
   width: 360px;
   height: 600px;  
-  margin: -40% 0% 0% 65%;     
+  margin: -38% 0% 0% 63%;     
   }
   #profileDiv{
     height: 700px;  
@@ -2278,7 +2139,8 @@ a:hover {
     height: 70px;
   }
   #spring{
-    display: none;
+    margin-right: -20px;
+    width: 140px;
   }
   #hib{
     margin-right: -20px;
@@ -2289,18 +2151,9 @@ a:hover {
     cursor: pointer;
     transform: scale(1.2) rotate(0deg); /* Slight rotation effect on hover */
   }
-  #experienceDiv {
-    height: 850px;
-}
-#experienceContent > h1{
-    text-align: center;
-    font-size: 58px ; 
-    margin: 2% 0% 0% 0%;  
-    font-weight: lighter;
-    letter-spacing: 12px;
-}
+
 .projectDiv{
-  height: 900px;
+  height: 1100px;
 }
 #projectContent > h1{
   font-size: 40px ; 
@@ -2441,7 +2294,7 @@ a:hover {
   .dp{
   width: 430px;
   height: 600px;  
-  margin: -35% 0% 0% 62%;     
+  margin: -32% 0% 0% 62%;     
   }
   #profileDiv{
     height: 800px;  
@@ -2480,7 +2333,8 @@ a:hover {
     height: 80px;
   }
   #spring{
-    display: none;
+    margin-right: -20px;
+    width: 140px;
   }
   #hib{
     margin-right: -20px;
@@ -2491,18 +2345,9 @@ a:hover {
     cursor: pointer;
     transform: scale(1.2) rotate(0deg); /* Slight rotation effect on hover */
   }
-  #experienceDiv {
-    height: 850px;
-}
-#experienceContent > h1{
-    text-align: center;
-    font-size: 58px ; 
-    margin: 2% 0% 0% 0%;  
-    font-weight: lighter;
-    letter-spacing: 12px;
-}
+
 .projectDiv{
-  height: 900px;
+  height: 1000px;
 }
 #projectContent > h1{
   font-size: 40px ; 
@@ -2681,7 +2526,8 @@ a:hover {
     height: 80px;
   }
   #spring{
-    display: none;
+    margin-right: -20px;
+    width: 140px;
   }
   #hib{
     margin-right: -20px;
@@ -2692,18 +2538,9 @@ a:hover {
     cursor: pointer;
     transform: scale(1.2) rotate(0deg); /* Slight rotation effect on hover */
   }
-  #experienceDiv {
-    height: 850px;
-}
-#experienceContent > h1{
-    text-align: center;
-    font-size: 60px ; 
-    margin: 2% 0% 0% 0%;  
-    font-weight: lighter;
-    letter-spacing: 14px;
-}
+
 .projectDiv{
-  height: 900px;
+  height: 1000px;
 }
 #projectContent > h1{
   font-size: 40px ; 
@@ -2767,7 +2604,7 @@ a:hover {
   .dp{
   width: 500px;
   height: 630px;  
-  margin: -35% 0% 0% 67%;     
+  margin: -30% 0% 0% 67%;     
   }
   #profileDiv{
     height: 800px;  
@@ -2806,7 +2643,8 @@ a:hover {
     height: 80px;
   }
   #spring{
-    display: none;
+    margin-right: -20px;
+    width: 140px;
   }
   #hib{
     margin-right: -20px;
@@ -2817,18 +2655,9 @@ a:hover {
     cursor: pointer;
     transform: scale(1.2) rotate(0deg); /* Slight rotation effect on hover */
   }
-  #experienceDiv {
-    height: 850px;
-}
-#experienceContent > h1{
-    text-align: center;
-    font-size: 63px ; 
-    margin: 2% 0% 0% 0%;  
-    font-weight: lighter;
-    letter-spacing: 15px;
-}
+
 .projectDiv{
-  height: 900px;
+  height: 1000px;
 }
 #projectContent > h1{
   font-size: 45px ; 
