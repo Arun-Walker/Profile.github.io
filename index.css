@@ -118,12 +118,12 @@ body::-webkit-scrollbar{
     border: none; 
     margin: -33% 0% 0% 60%;     
     border-radius: 30px;
-    background-image: url('DSC02.jpg');
+    background-image: url('IMG3.jpg'); 
     background-size: cover;  
     background-position: center;  
     background-repeat: no-repeat; 
-    opacity: 0.5;
-    transition: opacity 0.8s ease-in-out, box-shadow 0.8s ease-in-out;
+    opacity: 0.2; 
+    transition: opacity 0.8s ease-in-out, box-shadow 0.8s ease-in-out; 
 }
 .dp:hover{
     opacity: 1;
@@ -301,6 +301,25 @@ body::-webkit-scrollbar{
    animation-timeline: view();
    animation-range: entry 0% cover 40%;
 }
+#downloadBtn{
+  margin: -150px 50px 0px 0px;    
+  width: 200px;  
+  height: 40px;  
+  border: 2px solid rgb(153, 42, 243);
+  border-radius: 10px;
+  background-color: white;
+  color: #000000;
+  font-size: 15px;  
+  float: right; 
+  transition: transform ease-in-out .3s;
+} 
+#downloadBtn:hover{
+  box-shadow: 
+    0px 0px 10px #8A2BE2,  
+    0px 0px 100px #FF1493, 
+    0px 0px 360px #00BFFF;
+    transform: scale(1.15);  
+}
 /*User-Data*/
 /* General Styling */
 h2 {
@@ -308,7 +327,7 @@ h2 {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-p {
+p { 
   margin: 5px 0;
   font-size: 16px;
   line-height: 1.5;
@@ -643,9 +662,15 @@ a:hover {
   margin: 5% 0% 5% 0%;  
   letter-spacing: 12px;
 }
-
+#downloadBtn{
+  margin: 20px 0px 0px 50px;        
+  width: 150px;      
+  height: 30px;   
+  font-size: 10px;
+  float: left;
+}
 /* Main Container with 5% Indent */
-.container {
+.container { 
   padding: 20px;
   margin: 1% 0%; /* Indent 5% on both sides */
   display: flex;
@@ -721,7 +746,14 @@ a:hover {
       font-size: 13px; 
     }
     .projectDiv{
-      height: 1600px;
+      height: 1300px;  
+    }
+    #downloadBtn{
+      margin: 20px 0px 0px 100px;         
+      width: 200px;       
+      height: 30px;   
+      font-size: 12px;
+      float: left;
     }
 
 }
@@ -857,6 +889,13 @@ a:hover {
   font-size: 35px; 
   margin: 5% 0% 5% 0%;  
   letter-spacing: 12px;
+}
+#downloadBtn{
+  margin: 20px 0px 0px 100px;         
+  width: 200px;       
+  height: 30px;       
+  font-size: 12px;
+  float: left;
 }
 /* Main Container with 5% Indent */
 .container {
@@ -1056,6 +1095,13 @@ a:hover {
   min-width: 150px; /* Set consistent width for labels */
   display: inline-block; /* Maintain block alignment */
 }
+#downloadBtn{
+  margin: 20px 0px 0px 100px;         
+  width: 200px;       
+  height: 35px;    
+  font-size: 12px;
+  float: left;
+}
 /* Contact Me Layout - Middle */
 .contact {
   display: grid;
@@ -1237,6 +1283,13 @@ a:hover {
     min-width: 150px; /* Set consistent width for labels */
     display: inline-block; /* Maintain block alignment */
   }
+  #downloadBtn{
+    margin: 20px 0px 0px 100px;         
+    width: 250px;        
+    height: 35px;    
+    font-size: 12px;
+    float: left;
+  } 
   /* Contact Me Layout - Middle */
   .contact {
     display: grid;
@@ -1316,9 +1369,9 @@ a:hover {
     width: 180px;  
   }
   .dp{
-  width: 250px;
+  width: 250px; 
   height: 380px;  
-  margin: -50% 0% 0% 55%;     
+  margin: -45% 0% 0% 55%;      
   }
   #profileDiv{
     height: 700px;  
@@ -1404,6 +1457,13 @@ a:hover {
   margin: 5% 0% 5% 0%;  
   letter-spacing: 12px;
 }
+#downloadBtn{
+  margin: 20px 0px 0px 100px;         
+  width: 250px;        
+  height: 35px;    
+  font-size: 14px; 
+  float: left;
+}   
 /* Main Container with 5% Indent */
 .container {
   padding: 20px;
@@ -1586,6 +1646,13 @@ a:hover {
   margin: 5% 0% 5% 0%;  
   letter-spacing: 12px;
 }
+#downloadBtn{
+  margin: 20px 0px 0px 100px;         
+  width: 300px;         
+  height: 40px;     
+  font-size: 16px;  
+  float: left;
+}      
 /* Main Container with 5% Indent */
 .container {
   padding: 20px;
@@ -1775,14 +1842,21 @@ a:hover {
   font-size: 17px;
 }
 .bioDataDiv{
-  height: 1400px;
+  height: 1500px; 
 }
 #bioDataContent > h1{
   text-align: center;
-  font-size: 35px; 
+  font-size: 35px;  
   margin: 5% 0% 5% 0%;  
   letter-spacing: 12px;
 }
+#downloadBtn{
+  margin: 20px 0px 0px 150px;         
+  width: 300px;         
+  height: 40px;     
+  font-size: 16px;  
+  float: left;
+}    
 /* Main Container with 5% Indent */
 .container {
   padding: 20px;
@@ -1790,7 +1864,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 30px;
-}
+} 
 .personal-data p{
   font-size: 18px;
 }
